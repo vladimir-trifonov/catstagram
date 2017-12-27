@@ -1,6 +1,8 @@
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
+import LazyLoad from 'react-lazyload'
+import './Gallery.css'
 
 import { loadPhotos } from '../../actions/photos'
 import { splitListToBuckets } from '../../utils/helpers'
@@ -20,19 +22,26 @@ class Gallery extends PureComponent {
     const buckets = splitListToBuckets(this.props.photos, 4)
 
     return (
-      <div className='row'>
-        {buckets.map((bucket, index) => (
-          <div className='column' key={index}>
-            {bucket.map((photo) => (<img key={photo.id} src={`${apiHost}\\${photo.path}`} />))}
-          </div>
-        ))}
+      <div className='gallery'>
+        <div className='row'>
+          {buckets.map((bucket, index) => (
+            <div className='column' key={index}>
+              {bucket.map((photo) => (
+                <LazyLoad height={200} key={photo.id}>
+                  <img className='md-paper md-paper--1' src={`${apiHost}\\${photo.path}`} />
+                </LazyLoad>
+              ))}
+            </div>
+          ))}
+        </div>
       </div>
     )
   }
 }
 
 Gallery.propTypes = {
-  photos: PropTypes.array.isRequired
+  photos: PropTypes.array.isRequired,
+  loadPhotosActionCreator: PropTypes.func.isRequired
 }
 
 const mapStateToProps = ({ photos }) => {
