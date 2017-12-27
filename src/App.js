@@ -8,7 +8,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className='App-header'>
+        <header className='App-header md-paper md-paper--1'>
           <h1 className='App-title'>
             <Link to='/' className='logo-link'>Catstagram</Link>
           </h1>

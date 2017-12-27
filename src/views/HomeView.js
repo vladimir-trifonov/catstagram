@@ -1,10 +1,10 @@
 import React from 'react'
 
-import { Images } from '../components'
+import { Gallery } from '../components'
 
 const HomeView = () => (
-  <div className='md-grid md-cell--6'>
-    <Images />
+  <div className='md-grid md-cell--12'>
+    <Gallery />
   </div>
 )
 

@@ -1,1 +1,1 @@
-export const LOAD_IMAGES = 'LOAD_IMAGES'
+export const LOAD_PHOTOS = 'LOAD_PHOTOS'

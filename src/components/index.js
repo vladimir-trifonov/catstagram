@@ -1,2 +1,2 @@
-import Images from './images/Images'
-export { Images }
+import Gallery from './gallery/Gallery'
+export { Gallery }

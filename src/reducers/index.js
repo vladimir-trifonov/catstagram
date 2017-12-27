@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux'
 import { routerReducer as routing } from 'react-router-redux'
-import images from './images'
+import photos from './photos'
 
 export default combineReducers({
-  images,
+  photos,
   routing
 })
