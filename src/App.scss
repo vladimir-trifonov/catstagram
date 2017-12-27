@@ -1,0 +1,36 @@
+@import 'globals';
+
+@include react-md-everything;
+
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+}
+
+.App-header {
+  background-color: #222;
+  height: 80px;
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+.App-title {
+  font-size: 1.5em;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.selected div[role=button] {
+  background: rgba(0, 0, 0, 0.12);
+}
+
+.logo-link {
+  text-decoration: none;
+  color: white;
+}
