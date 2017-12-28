@@ -13,8 +13,6 @@
       margin-top: 8px;
       vertical-align: middle;
       transition: all .2s ease-in-out; }
-    .gallery .column img:hover {
-      transform: scale(1.02); }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media (max-width: 800px) {

@@ -1,16 +1,28 @@
-import { LOAD_PHOTOS } from './types'
+import { LOAD_PHOTOS, UPLOAD_PHOTO } from './types'
 
-import { getPhotos } from '../utils/api'
+import { getPhotos, uploadPhoto as uploadPhotoAPI  } from '../utils/api'
 
-const loadPostsAction = photos => ({
+const loadPhotosAction = photos => ({
   type: LOAD_PHOTOS,
   photos
 })
 
-export function loadPhotos(dispatch, category) {
+const uploadPhotoAction = (id, uri) => ({
+  type: UPLOAD_PHOTO,
+  id,
+  uri
+})
+
+export function loadPhotos(dispatch) {
   return getPhotos()
     .then(photos => {
-      dispatch(loadPostsAction(photos))
+      dispatch(loadPhotosAction(photos))
     })
-    .catch(error => console.error(error))
+}
+
+export function uploadPhoto(dispatch, id, path) {
+  return uploadPhotoAPI(path)
+    .then(response => {
+      dispatch(uploadPhotoAction(id, response.uri))
+    })
 }

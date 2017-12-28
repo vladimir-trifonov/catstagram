@@ -1,0 +1,28 @@
+.photo {
+  & {
+    position: relative;
+  }
+
+  .submitted {
+    left: 4px;
+    top: 12px; 
+    position: absolute; 
+    z-index: 1;
+  }
+
+  .linked {
+    right: 30px;
+    bottom: 30px; 
+    position: absolute; 
+    z-index: 1;
+  }
+
+  svg {
+    fill: rgba(84, 145, 132, 0.7);
+    position: absolute;
+  }
+
+  svg:hover, img:hover {
+    cursor: pointer;
+  }
+}
