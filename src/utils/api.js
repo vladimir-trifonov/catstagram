@@ -29,4 +29,3 @@ export const uploadPhoto = (path) => {
     .then(response => response.json())
     .catch(console.error)
 }
-

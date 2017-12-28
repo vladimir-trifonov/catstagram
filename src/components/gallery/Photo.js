@@ -7,7 +7,7 @@ import './Photo.css'
 import { uploadPhoto } from '../../actions/photos'
 
 class Photo extends PureComponent {
-  renderImg({ id, path, src }) {
+  renderImg ({ id, path, src }) {
     return (
       <img
         alt={`iamge-${path}`}
@@ -18,7 +18,7 @@ class Photo extends PureComponent {
     )
   }
 
-  render() {
+  render () {
     const { photo } = this.props
     return (
       <LazyLoad height={400}>
@@ -69,7 +69,7 @@ Photo.propTypes = {
 
 const mapStateToProps = ({ photos }, { id }) => {
   return {
-    photo: photos.find((photo => photo.id === id))
+    photo: photos.find(photo => photo.id === id)
   }
 }
 

@@ -7,7 +7,7 @@ import { HomeView } from './views'
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div className='App'>
         <header className='App-header md-paper md-paper--1'>
           <h1 className='App-title'>
             <Link to='/' className='logo-link'>Catstagram</Link>

@@ -7,14 +7,14 @@ const photos = (state = [], action) => {
     case UPLOAD_PHOTO:
       return [
         ...state.map(photo => {
-          if(photo.id === action.id) {
+          if (photo.id === action.id) {
             return Object.assign({}, photo, {
               uri: action.uri
             })
           }
 
           return photo
-        }),
+        })
       ]
     default:
       return state

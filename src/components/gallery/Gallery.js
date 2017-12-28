@@ -8,11 +8,11 @@ import { splitListToBuckets } from '../../utils/helpers'
 import Photo from './Photo'
 
 class Gallery extends PureComponent {
-  componentDidMount() {
+  componentDidMount () {
     this.props.loadPhotosActionCreator()
   }
 
-  render() {
+  render () {
     const numOfColumns = 4
     const buckets = splitListToBuckets(this.props.photos, numOfColumns)
 
@@ -51,4 +51,3 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(Gallery)
-
