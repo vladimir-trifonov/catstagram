@@ -10,6 +10,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Runs your app in development mode.
 
+## How to use it
+```
+In order to upload the info click on some image. When the check icon appear over the image 
+click again to open the pasteBin editor with the information, which being uploaded.
+```
+
 ## Run tests
 Run the following command to do this:
 ```sh
