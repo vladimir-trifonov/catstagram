@@ -1,25 +1,27 @@
 /* global it, describe */
 import React from 'react'
-import App from './App'
-import { BrowserRouter, Route } from 'react-router-dom'
+import { render } from 'enzyme'
+import Photo from './Photo'
 import configureMockStore from 'redux-mock-store'
 import { Provider } from 'react-redux'
 import thunk from 'redux-thunk'
-import { render } from 'enzyme'
 
 const middlewares = [ thunk ]
 const mockStore = configureMockStore(middlewares)
 
-describe('App', () => {
+describe('Photo', () => {
   it('renders without crashing', () => {
+    const photos = [{
+      id: 'xx',
+      path: '/',
+      src: '/'
+    }]
     fetch.mockResponse(JSON.stringify([]))
 
     const div = document.createElement('div')
     render((
-      <Provider store={mockStore({ photos: [] })}>
-        <BrowserRouter>
-          <Route path='/' component={App} />
-        </BrowserRouter>
+      <Provider store={mockStore({ photos })}>
+        <Photo id='xx' key='xx' />
       </Provider>
     ), div)
   })

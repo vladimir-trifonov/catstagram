@@ -3,7 +3,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Starting the Project
 - Install the dependencies using `yarn install`
-- Add PASTEBIN_API_KEY to development.env and/or production.env files
+- Important: Add PASTEBIN_API_KEY to development.env and/or production.env files
 - Start the project using `yarn start`
 
 #### `yarn start`
